@@ -38,7 +38,7 @@ int main()
     chrono::steady_clock::time_point e = chrono::steady_clock::now();
     cout << "Solved \n";
     cout << s;
-    cout << "Felicitation you solved it in : " << chrono::duration_cast<chrono::microseconds>(e - b).count() << " [us] \n \n";
+    cout << "Congratulations you solved it in : " << chrono::duration_cast<chrono::microseconds>(e - b).count() << " [us] \n \n";
 
     return 0;
 }
