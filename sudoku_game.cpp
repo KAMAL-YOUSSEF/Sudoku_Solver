@@ -29,7 +29,10 @@ void Game::full_board(char t[9][9]) {
         }
     }
 }
-bool Game::empty(int i, int j) { if (this->grid[i][j] != '0') return false; return true; }
+bool Game::empty(int i, int j) 
+{ 
+	return grid[i][j] == '0';
+}
 bool Game::can_add(int i, int j, char a)
 {
     int square_x = (j / 3) * 3;
@@ -45,7 +48,9 @@ bool Game::done()
 {
     for (int i=0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
-            if (grid[i][j] == '0') { return false; }
+            if (grid[i][j] == '0') { 
+		    return false;
+	    }
         }
     }
     return true;
